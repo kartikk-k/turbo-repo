@@ -17,7 +17,7 @@ export default function Home() {
             width={20}
             height={20}
           />
-          Frontend
+          Main Frontend 
         </a>
         {/* <a
           href={'#'}
