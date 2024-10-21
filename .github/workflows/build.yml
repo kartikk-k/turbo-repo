@@ -6,6 +6,22 @@ on:
             - main
 
 jobs:
+    lint:
+        name: Run Lint
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '20'
+            
+            - name: Install dependencies for linting
+              run: npm install
+
+            - name: Run lint command
+              run: npm run lint
+
     build:
         name: Build repo
         runs-on: ubuntu-latest
